@@ -9,7 +9,9 @@ import java.util.List;
 public interface ProductService {
     ProductDto saveProduct(ProductToSaveDto productToSaveDto);
 
-    List<ProductDto> getAllProduct();
+    ProductDto getProductbyID(Long id);
 
-    List<ProductDto> findAvailableProducts(id, name, description, price, stock);
+    ProductDto updateProductbyID(Long id, ProductToSaveDto product);
+
+    void deleteProductbyID(Long id);
 }
